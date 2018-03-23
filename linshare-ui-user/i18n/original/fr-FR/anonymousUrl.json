@@ -1,0 +1,19 @@
+{
+  "ANONYMOUS_URL": {
+    "FORM": {
+      "CANCEL": "Annuler",
+      "EMPTY": "Le mot de passe est requis pour accéder au partage anonyme",
+      "INVALID": "Le mot de passe fourni n'est pas valide",
+      "LABEL": "Mot de passe",
+      "SUBMIT": "Valider",
+      "TITLE": "Mot de passe du partage anonyme"
+    },
+    "HEADER": {
+      "TITLE": "PORTAIL DES URL ANONYMES"
+    },
+    "HOME": {
+      "404": "L'url que vous tentez d'accéder est invalide",
+      "MESSAGE": "Vous avez besoin d'une URL valide pour accéder à un partage anonyme de documents"
+    }
+  }
+}

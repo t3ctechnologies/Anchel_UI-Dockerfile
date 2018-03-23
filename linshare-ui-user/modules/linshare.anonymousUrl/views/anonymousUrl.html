@@ -1,0 +1,82 @@
+<div x-ng-if="anonymousUrlVm.tableParams !== undefined">
+    <div class="file-listing-ctn anonymous-url">
+        <div class="container files">
+            <div class="anonymous-user-msg">
+                <h3>{{'ANONYMOUS_URL.HELLO'| translate}} {{anonymousUrlVm.anonymousUrlData.recipient.mail}} !</h3>
+                <p>{{'ANONYMOUS_URL.MSG'| translate}}
+                    <b> {{anonymousUrlVm.anonymousUrlData.actor.firstName}} {{anonymousUrlVm.anonymousUrlData.actor.lastName}}</b>.
+                    </p>
+            </div>
+            <div class="card" id="collapsible-content">
+                <div class="card-header">
+                    <div id="breadcrumb-wrap">
+                        <div id="action-header">
+                            <div class="fg-line toolbar-actions-items">
+                                <div id="top-search" class="toolbar-mobile-item col-xs-3 visible-xs" x-ng-click="toggleSearchState()">
+                                    <a href="">
+                                        <i class="tm-icon zmdi zmdi-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="input-group search-bar hidden-xs">
+                                <div id="search-field-ctn">
+                                    <div class="search-style">
+                                        <div class="fg-line">
+                                            <input type="text" class="form-control" autocomplete="off" x-ng-model="anonymousUrlVm.paramFilter['name']"
+                                                placeholder="{{'FILTER_COMPONENT.PLACEHOLDER_FILE_NAME' | translate}}" x-ng-change="updateParams()"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="drop-area">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="file-list-table" class="table table-vmiddle" x-ng-table="anonymousUrlVm.tableParams" show-filter="true">
+                                <tr x-ng-repeat="documentFile in $data" x-ng-click="backToSidebarContentDetails()" class="p-b-5">
+                                    <td class="center thumb-type-item">
+                                        <i class="fa ls-1p5x" x-ng-class="'{{documentFile.type | mimetypeIcone}}'"></i>
+                                    </td>
+                                    <td data-title="'TABLE_HEADER.NAME' | translate" class="row no-padding show-li-actions"
+                                        data-sortable="'name'" uuid="{{o.uuid}}">
+                                        <div class="ctn-name-actions">
+                                            <span class="col-xs-9 col-sm-7 col-md-8 file-name-col">
+                                                <a x-ng-click="anonymousUrlVm.download(documentFile)" title="{{'BOUTON_LABEL_TITLE.DOWNLOAD'| translate}}">
+                                                {{documentFile.name}} </a>
+                                                <span>
+                                                    <span x-ng-show="documentFile.shared > 0" class="shared-activated hidden-xs">
+                                                    {{'BOUTON_LABEL_TITLE.SHARED' | translate}} </span>
+                                                    <p class="mobile-list-item-info visible-xs">
+                                                    {{documentFile.modificationDate | relativeTime}}, {{documentFile.size
+                                                        | readableSize: false}},
+                                                        <span x-ng-show="documentFile.shared > 0">
+                                                        {{'BOUTON_LABEL_TITLE.SHARED' | translate}} </span>
+                                                    </p>
+                                                </span>
+                                            </span>
+                                            <span class="col-xs-3 col-sm-5 col-md-4 actions-list-ctn pull-right">
+                                                <ul class="actions pull-right">
+                                                    <li class="hidden-xs">
+                                                        <a x-ng-click="anonymousUrlVm.download(documentFile)" title="{{'BOUTON_LABEL_TITLE.DOWNLOAD' | translate}}"
+                                                            download="w3logo" event-propagation-stop>
+                                                            <i class="zmdi zmdi-download"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="hidden-xs" x-ng-if="!mainVm.isVisible()" data-title="'TABLE_HEADER.MODIFICATION_DATE' | translate"
+                                        data-sortable="'modificationDate'"> {{documentFile.modificationDate | relativeTime}} </td>
+                                    <td class="hidden-xs" x-ng-if="!mainVm.isVisible()"
+                                        data-title="'TABLE_HEADER.SIZE' | translate" data-sortable="'size'"> {{documentFile.size | readableSize: false}} </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

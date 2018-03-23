@@ -1,0 +1,88 @@
+{
+  "BACKGROUND_GUEST_MSG": "En créant des comptes invités, vos contacts externe pourront échanger des fichiers via l'application.",
+  "BACKGROUND_GUESTS_TITLE_MSG": "Créer des comptes invités",
+  "ACTION": {
+    "ADD_TO_WORKGROUPS": "Ajouter à des groupes de travail"
+  },
+  "BOUTON_LABEL_TITLE": {
+    "EDIT": "Modifier",
+    "DELETE": "Supprimer",
+    "GUEST": "Invité(s)"
+  },
+  "BREADCRUMB_TITLE_GUEST": "Comptes invités",
+  "GUEST_DETAILS": {
+    "ACTIVATED": "Activé",
+    "ADMIN": "Administrateur",
+    "ALREADY_A_MEMBER": "Déjà membre",
+    "AVAILABLE_CONTACTS": "Liste de contacts disponible",
+    "COMMENT": {
+      "EMPTY": "Pas de commentaire",
+      "TITLE": "Commentaire"
+    },
+    "DEACTIVATED": "Désactivé",
+    "DETAIL_OF_GUEST_ACCOUNT": "Détail compte invité",
+    "DOMAIN": "Domaine",
+    "EDIT_GUEST": "Editer",
+    "EXPIRE_THE": "Expire le",
+    "MY_SPACE": "Espace personnel",
+    "RESTRICTED_CONTACTS": "Contact restreint",
+    "UPDATE_OF_GUEST_ACCOUNT": "Editer le compte"
+  },
+  "HEADER_GUEST": {
+    "DOMAIN": "Domaine",
+    "SLIDER" : {
+      "MY_GUEST": "Mes invités",
+      "OTHER_GUEST": "Autre invités"
+    }
+  },
+  "NC": "N.C.",
+  "ORDER_BY": {
+    "EXPIRATION_DATE": "Date d'expiration",
+    "EMAIL": "Courriel",
+    "DOMAIN_NAME": "Nom de domaine"
+  },
+  "SIDEBAR": {
+    "ADMIN_RIGHT": "Vous n'avez pas les droits d'aministration pour mettre à jour cet invité",
+    "BUTTON": {
+      "CREATE": "Créer",
+      "CANCEL": "Annuler",
+      "UPDATE": "Editer"
+    },
+    "ERROR": {
+      "INVALID_DATE": "La date saisit doit être supérieur à la date d'aujourd'hui et inférieur à la date maximal du :",
+      "INVALID_EMAIL": "Format d'adresse électronique invalide.",
+      "INVALID_EMPTY_FIELD": "Ce champ ne peut être vide."
+    },
+    "LABEL": {
+      "ACTIVATE_USER_SPACE": "Activer l'espace personnel ",
+      "ADD_DESCRIPTION": "Ajouter une description au profil",
+      "ADD_EMAIL": "Ajouter un message par email",
+      "ADVANCED_OPTIONS": "Options avançées",
+      "ALLOW_MODIFICATORS": "Autoriser d'autres utilisateurs à modifier ce compte",
+      "EMAIL": "Adresse électronique",
+      "ENTER_DESCRIPTION": "Saisissez votre description",
+      "ENTER_EMAIL": "Saisissez votre message",
+      "EXP_DATE": "Date d'expiration",
+      "FIRSTNAME": "Prénom",
+      "LASTNAME": "Nom",
+      "RESTRICT_CONTACTS": "Restreindre la liste de contact"
+    },
+    "NOTIFICATION": {
+      "SUCCESS": {
+        "CREATE": "Le compte invité a été créé avec succès.",
+        "UPDATE": "Le compte invité a été mis à jour avec succès."
+      }
+    },
+    "TITLE": {
+      "CREATE": "Ajouter compte invité"
+    }
+  },
+  "SWEET_ALERT": {
+    "ON_GUEST_DELETE": {
+      "CANCEL_BUTTON": "Annuler!",
+      "CONFIRM_BUTTON": "Supprimer",
+      "TEXT": "Vous êtes sur le point de supprimer ${count} invité${plural} !",
+      "TITLE": "Êtes-vous sûr ?"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "SERVER_RESPONSE": {
+    "HTTP_CODES": {
+      "ERROR_400": "MAUVAISE REQUETE",
+      "ERROR_401": "NON AUTORISE",
+      "ERROR_403": "INTERDIT",
+      "ERROR_404": "NON TROUVE",
+      "ERROR_405": "METHODE NON AUTORISEE",
+      "ERROR_408": "TEMPS D'ATTENTE ECOULE",
+      "ERROR_500": "ERREUR SERVER INTERNE",
+      "ERROR_501": "NON IMPLEMENTEE",
+      "ERROR_502": "MAUVAISE PASSERELLE",
+      "ERROR_503": "SERVICE NON DISPONIBLE",
+      "ERROR_520": "LE SERVEUR WEB RETOURNE UNE ERREUR INCONNUE",
+      "ERROR_DEFAULT": "LE SERVEUR WEB RETOURNE UNE ERREUR INCONNUE"
+    },
+    "DETAILS": {
+      "DEFAULT": {
+        "NONE": "",
+        "SERVER": "Le serveur est temporairement indisponible",
+        "1000": "Erreur inconnue",
+        "2000": "Erreur d'authentification",
+        "2203": "Vous n'êtes pas autorisé à supprimer cet invité",
+        "2204": "Vous n'êtes pas autorisé à mettre à jour cet invité",
+        "20000": "Une erreur est survenue dans la base de données",
+        "20001": "Vous n'êtes pas autorisé à utiliser ce service",
+        "28000": "L'invité n'a pas été trouvé",
+        "28001": "L'invité existe dèjà",
+        "28403": "Vous n'etes pas autorisé à accéder à cet invité",
+        "28405": "La liste de contact restreint de l'invité est vide",
+        "28406": "La recherche pour les invités est invalide",
+        "38400": "La date d'expiration de l'invité est invalide"
+      },
+      "UPLOAD_ERROR": {
+        "NONE": "Une erreur est survenue pendant l'envoi du fichier",
+        "3000": "Ce type de fichier est interdit (type mime)",
+        "3002": "Ce type de fichier est interdit",
+        "3003": "Le fichier n'a pu être déposé car un virus a été détecté",
+        "3007": "Le fichier n'a pu être scanné",
+        "26007": "Impossible d'ajouter le fichier car le dossier distant n'existe pas",
+        "39001": "Les dépôts sont temporairement désactivés car le mode maintenance est activé",
+        "40403": "Impossible de connaitre le statut du traitement de votre fichier sur le serveur",
+        "40404": "Impossible de connaitre le statut du traitement de votre fichier sur le serveur",
+        "46001": "Erreur de configuration serveur, dépôt impossible",
+        "46002": "Erreur de configuration serveur, dépôt impossible",
+        "46003": "Erreur de configuration serveur, dépôt impossible",
+        "46004": "Erreur de configuration serveur, dépôt impossible",
+        "46010": "La taille du fichier dépasse la taille maximale autorisé (${maxFileSize})",
+        "46011": "Espace insuffisant sur le serveur, veuillez ressayer plus tard",
+        "46012": "Espace insuffisant sur le serveur, veuillez ressayer plus tard",
+        "46013": "Espace insuffisant sur le serveur, veuillez ressayer plus tard",
+        "46014": "Espace insuffisant sur le serveur (${quotaAttempt}), libérez de l'espace puis réessayez",
+        "46015": "Espace insuffisant sur le serveur, veuillez ressayer plus tard",
+        "46403": "Erreur de configuration serveur, dépôt impossible"
+      },
+      "WORKGROUP_NODES_ERROR": {
+        "26007": "Le dossier distant est introuvable",
+        "28006": "Les dossiers ne peuvent être copiés"
+      }
+    }
+  }
+}

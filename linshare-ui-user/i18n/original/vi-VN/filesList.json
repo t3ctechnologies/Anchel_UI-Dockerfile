@@ -1,0 +1,102 @@
+{
+  "PAGE_FILE_TITLE": "Danh sách tập tin",
+  "TABLE_HEADER": {
+    "NAME": "Tên",
+    "MODIFICATION_DATE": "Lần thay đổi cuối cùng",
+    "TBT__CREATION_DATE": "",
+    "SIZE": "Kích cỡ",
+    "ACTION": "Tác vụ"
+  },
+  "TBT__BREADCRUMB_ISOLATE": "",
+  "BREADCRUMB_TITLE": "Tập tin của tôi",
+  "TBT__BACKGROUND_WORKGROUP_TITLE_MSG": "",
+  "TBT__BACKGROUND_WORKGROUP_MSG": "",
+  "RIGHT_PANEL": {
+    "EMPTY": "Không có tập tin nào được chọn",
+    "DETAILS": {
+      "ADVANCED_SHARE": "Chia sẻ nâng cao",
+      "TBT__CANCEL": "",
+      "CIPHERED": "Mã hóa",
+      "TBT__CIPHERED_NO": "",
+      "TBT__CIPHERED_YES": "",
+      "TBT__CREATE": "",
+      "TBT__CREATE_LIST": "",
+      "TBT__CREATION_DATE": "",
+      "DESCRIPTION": "Miêu tả",
+      "EXPIRATION_DATE": "Ngày hết hạn",
+      "TBT__EXPIRATION_DATE_LABEL": "",
+      "TBT__INPUT_LIST_NAME": "",
+      "MODIFICATION_DATE": "Ngày thay đổi",
+      "TBT__NO_PREVIEW": "",
+      "TBT__PARAMETERS": "",
+      "PEOPLE_SHARED_WITH": "Người dùng",
+      "QUICK_SHARE": "Chia sẻ nhanh",
+      "TBT__RECIPIENTS_SELECTION": "",
+      "TBT__SELECTED_FILES": "",
+      "TBT__SHARE": "",
+      "SHARE_PLACEHOLDER": "địa chỉ thư người nhận",
+      "TBT__SHARED_BY": "",
+      "SHARED_WITH": "Chia sẻ với:",
+      "TBT__SHARING_DATE": "",
+      "SIZE": "Kích cỡ",
+      "TITLE": "CHI TIẾT",
+      "TYPE": "Thể loại",
+      "TBT__UNDEFINED": "",
+      "UPLOAD_DATE": "Ngày tải lên"
+    },
+    "ACTIVITIES": {
+      "TITLE": "Lịch sử hoạt động"
+    },
+    "SHARE": {
+      "TITLE": "CHIA SẺ",
+      "SELECTED_FILES": "Tập tin được chọn",
+      "SHOW_SELECTED_FILES": "Xem",
+      "SETTINGS": "Cài đặt",
+      "MORE_OPTIONS": "Thêm lựa chọn",
+      "RECIPIENTS": "Thêm người nhận",
+      "CREATE_MAILING_LIST": "Tạo danh sách người nhận"
+    },
+    "SHARE_OPTIONS": {
+      "TITLE": "Chia sẻ",
+      "ADD_NOTE": "Thêm miêu tả",
+      "ADD_NOTE_PLACEHOLDER": "Nhập miêu tả",
+      "SECURE_SHARING": "Chia sẻ bảo mật",
+      "SHARING_ACKNOWLEDGEMENT": "Chứng nhận đã chia sẻ",
+      "USDA": "Chứng nhận không tải về sau khi chia sẻ",
+      "NOTIFICATION_DATE": "Ngày thay đổi",
+      "ATTACH_EMAIL": "Tùy chỉnh thư điện tử",
+      "ATTACHED_EMAIL_SUBJECT": "Chủ đề",
+      "ATTACHED_EMAIL_BODY_PLACEHOLDER": "Nhập văn bản",
+      "TBT__GO_TO_UPLOAD_FILES": ""
+    }
+  },
+  "SELECTED_FILES": {
+    "BREADCRUMB_TITLE": "Tập tin được chọn",
+    "BACK_TO_ALL_FILES": "Quay lại danh sách tập tin"
+  },
+  "UPLOADED_FILES": {
+    "BREADCRUMB_TITLE": "Danh sách tập tin tải lên",
+    "UPLOAD_FILES_BUTTON": "Tải tập tin mới lên",
+    "SELECT_INFO": "Chọn tập tin sẽ được tải lên"
+  },
+  "DRAG_DROP_BACKGROUND": {
+    "TITLE": "Tải tập tin lên đây",
+    "COMMENT": "Kéo và thả tập tin tại đây"
+  },
+  "DRAG_DROP_BACKGROUND_MOBILE_MY_FILES": {
+    "TITLE": "",
+    "COMMENT": ""
+  },
+  "TTB__DRAG_DROP_BACKGROUND_ON_DRAG": {
+    "TTB__TITLE": "",
+    "TTB__COMMENT": ""
+  },
+  "WORKGROUPS_LIST": {
+    "TBT__PROJECT": "",
+    "TBT__FOLDER": "",
+    "TBT__SHARED_FOLDER": "",
+    "TBT__UPLOAD_FILE": "",
+    "TBT__UPLOAD_REQUEST": "",
+    "TBT__ADD_A_MEMBER": ""
+  }
+}

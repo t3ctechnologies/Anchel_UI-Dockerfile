@@ -1,0 +1,77 @@
+{
+  "SWEET_ALERT": {
+    "ON_FILE_DELETE": {
+      "TITLE": "Êtes-vous sûr?",
+      "TEXT": "Vous êtes sur le point de supprimer des fichiers. Attention, cette action est irreversible.",
+      "CONFIRM_BUTTON": "Oui, supprimer",
+      "CANCEL_BUTTON": "Annuler"
+    },
+    "ON_LOCALSTORAGE_DELETE": {
+      "TITLE": "Êtes-vous sûr?",
+      "TEXT": "Toutes les valeurs du stockage local seront effacées",
+      "CONFIRM_BUTTON": "Oui, continuez !",
+      "DONE": "Terminé",
+      "IS_CLEARED": "Le stockage local a été effacé"
+    },
+    "ON_MULTIPLE_DOWNLOAD": {
+      "TITLE": "Téléchargement multiple indisponible",
+      "TEXT": "Désolé, la fonctionalité de téléchargement multiple est en cours de construction.",
+      "CONFIRM_BUTTON": "OK"
+    }
+  },
+  "GROWL_ALERT": {
+    "ACTION": {
+      "DELETE": "Suppression réussie",
+      "DELETE_SINGULAR": "L'élément a été supprimé avec succès.",
+      "DELETE_PLURAL": "Les éléments ont été supprimés avec succès.",
+      "UPDATE": "L'élément a été mise à jour avec succès.",
+      "INSERT": "L'élément a été ajouté avec succès.",
+      "COPY": "Fichier copié avec succès dans vos fichiers.",
+      "COPY_PLURAL": "fichiers ont été copié vers votre Espace Personnel",
+      "COPY_SINGULAR": "fichier a été copié vers votre Espace Personnel.",
+      "SHARE": "Votre partage a été envoyé avec succès.",
+      "SHARE_ASYNC": "Le partage sera envoyé quand tous les fichiers seront transférés.",
+      "SHARE_FAILED": "Votre partage de fichiers a échoué."
+    },
+    "WARNING": {
+      "AT_LEAST_ONE_RECIPIENT": "Saisissez un destinataire",
+      "AT_LEAST_ONE_DOCUMENT": "Aucun fichier n'est sélectionné",
+      "CONTACT_STILL_EXISTS" : "est déjà dans la liste",
+      "INVALID_EMAIL": "Email invalide"
+    },
+    "ERROR": {
+      "FILE_NOT_FOUND": "Le fichier sélectionné n'a pas été trouvé",
+      "FILE_UPLOAD": "Le dépôt a échoué",
+      "503": "Serveur Indisponible",
+      "RENAME_FILE": "Un fichier avec le même nom existe déjà",
+      "RENAME_FOLDER": "Un dossier avec le même nom existe déjà",
+      "RENAME_CONTACTS_LIST": "Une liste de contacts avec le même nom existe déjà.",
+      "RENAME_INVALID": {
+        "EMPTY": "Le nom ne peut être vide",
+        "ENDING_POINT": "Le nom ne peut finir par le caractère '.'",
+        "REJECTED_CHAR": "Le nom saisi est invalide, vous ne pouvez utiliser les caractères suivants: '{{rejectedChar}}'"
+      },
+      "DELETE_ERROR": {
+        "26006": "La suppression de dossier remplit n'est pas encore supporté."
+      },
+      "NO_RESPONSE_ERROR": "Erreur sans réponse du serveur, voir les logs."
+    }
+  },
+  "TOAST_ALERT": {
+    "ACTION": {
+      "CLOSE": "Fermer",
+      "DETAILS": "Détails"
+    },
+    "WARNING": {
+      "ELEMENTS_NOT_DELETED": "élément(s) non supprimé(s)",
+      "ELEMENTS_NOT_DELETED_SINGULAR": "1 élément n'a pu être supprimé.",
+      "ELEMENTS_NOT_DELETED_PLURAL": " éléments n'ont pu être supprimés.",
+      "ERROR": "Erreur :",
+      "ERROR_404": "Élément introuvable",
+      "ERROR_403": "Vous n'êtes pas autorisé à supprimer cet élément",
+      "ERROR_400": "Suppression impossible",
+      "ERROR_500": "Erreur du serveur",
+      "ISOLATED_FILE": "Mode isolé sélection, activé : vous visualisez une selection restreinte de fichiers."
+    }
+  }
+}

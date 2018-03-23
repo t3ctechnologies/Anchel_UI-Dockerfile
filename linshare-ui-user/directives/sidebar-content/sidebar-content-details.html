@@ -1,0 +1,120 @@
+<div id="member-sidebar">
+  <div class="header-sidebar">
+      <i class="zmdi zmdi-chevron-left zmdi-hc-2x visible-xs" x-ng-click="mainVm.sidebar.hide()"></i> 
+      <h2 class="header-more-options set-ellipsis"> {{mainVm.sidebar.getData().currentSelectedDocument.current.name}} </h2>
+      <span class="hidden-xs actions" x-ng-click="mainVm.sidebar.hide()"> <a><i class="zmdi zmdi-close zmdi-hc-lg"></i></a> </span> 
+  </div>
+  <div x-ng-cloak="" class="tabs-demo-static-tabs tab-nav-detail" x-ng-class="{'two-tabs': mainVm.sidebar.getData().currentPage !== 'my_files'}">
+      <md-content>
+          <md-tabs md-selected="mainVm.sidebar.getData().data.selectedIndex" md-dynamic-height="" md-border-bottom="">
+              <md-tab id="tab1" label="{{'RIGHT_PANEL.DETAILS.TITLE' | translate}}" class="col-xs-4 no-padding">
+                  <md-content>
+                      <div x-ng-show="mainVm.sidebar.getData().currentSelectedDocument.current.name">
+                          <div id="profile-main" class="detail-workgroup">
+                              <div class="p-relative m-b-20 img-preview-ctn">
+                                  <p x-ng-show="mainVm.sidebar.getData().currentSelectedDocument.current.hasThumbnail === true" href=""> <img class="img-responsive" x-ng-src="data:image/png;base64,{{mainVm.sidebar.getData().currentSelectedDocument.current.thumbnail}}" alt=""> </p>
+                                  <div x-ng-show="!mainVm.sidebar.getData().currentSelectedDocument.current.hasThumbnail === true" class="np-preview-ctn">
+                                      <i class="fa fa-eye-slash no-preview" aria-hidden="true"></i> 
+                                      <p>{{"RIGHT_PANEL.DETAILS.NO_PREVIEW" | translate}}</p>
+                                  </div>
+                              </div>
+                              <div class="m-b-10">
+                                  <div class="description-ctn form-sidebar" x-ng-class="{'show-full-comment': commentFocused}" x-ng-init="commentFocused = false">
+                                      <textarea title="{{'INFORMATION_TAB.EDIT_DESCRIPTION' | translate}}" class="comment" spellcheck="false" name="description" id="description" x-ng-attr-placeholder="{{'INFORMATION_TAB.INSERT_DESCRIPTION' | translate}}" x-ng-model="mainVm.sidebar.getData().currentSelectedDocument.current.description" x-ng-bind="mainVm.sidebar.getData().currentSelectedDocument.current.description" x-ng-change="mainVm.sidebar.getData().updateDocument(mainVm.sidebar.getData().currentSelectedDocument.current)" x-ng-model-options="{updateOn: 'blur'}" x-ng-init="commentFocused = false" x-ng-focus="commentFocused = true" x-ng-blur="commentFocused = false" x-ng-readonly="mainVm.sidebar.getData().currentPage !== 'my_files'">
+
+                  </textarea>
+                                      <span x-ng-if="(((!commentFocused) && (mainVm.sidebar.getData().currentSelectedDocument.current.description.length > 54)));">...</span> 
+                                      <div class="edit-description clic-enabled" x-ng-click="commentFocused = !commentFocused ; commentFocused"> <i class="zmdi zmdi-edit" x-ng-if="!commentFocused" title="{{'INFORMATION_TAB.EDIT_DESCRIPTION' | translate}}"></i> <i class="zmdi zmdi-close" x-ng-if="commentFocused" title="{{'INFORMATION_TAB.ABORT_EDIT' | translate}}"></i> </div>
+                                  </div>
+                              </div>
+                              <!-- TODO: Set the appropriate action links except for from the last item for the my files view--> 
+                              <div class="visible-xs clearfix sidebar-toolbar">
+                                  <ul class="actions col-xs-12" data-ng-show="mainVm.sidebar.getData().currentPage == 'my_files'">
+                                      <li data-ng-click="mainVm.sidebar.getData().deleteDocuments(
+                                          mainVm.sidebar.getData().currentSelectedDocument.current)" event-propagation-stop class="col-xs-3"> <a href="" title="{{'ACTION.DELETE' | translate}}"> <i class="zmdi zmdi-delete"></i> </a> </li>
+                                      <li class="col-xs-3" x-ng-click="mainVm.sidebar.getData().onShare()"> <a href="" title="{{'BOUTON_LABEL_TITLE.SHARE' | translate}}"> <i class="zmdi zmdi-share"></i> </a> </li>
+                                      <li class="col-xs-3" x-ng-click="mainVm.sidebar.getData().downloadFile(
+                                          mainVm.sidebar.getData().currentSelectedDocument.current)"> <a title="{{'BOUTON_LABEL_TITLE.DOWNLOAD' | translate}}"> <i class="zmdi zmdi-download"></i> </a> </li>
+                                      <li class="col-xs-3"> <a href="" title="{{'ACTION.COPY_IN_GROUP' | translate}}" dropdown-toggle event-propagation-stop class="disabled-work-in-progress"> <i class="zmdi zmdi-copy"></i> </a> </li>
+                                  </ul>
+                                  <!-- TODO: Set the appropriate action links for the received files view--> 
+                                  <ul class="actions col-xs-12" x-ng-show="mainVm.sidebar.getData().currentPage == 'received_files'">
+                                      <li event-propagation-stop class="col-xs-3" x-ng-click="mainVm.sidebar.getData().deleteDocuments(
+                                          mainVm.sidebar.getData().currentSelectedDocument.current)"> <a href="" title="{{'ACTION.DELETE' | translate}}"> <i class="zmdi zmdi-delete"></i> </a> </li>
+                                      <li class="col-xs-3"> <a href="" title="{{'BOUTON_LABEL_TITLE.SHARE' | translate}}" event-propagation-stop="true" class="disabled-work-in-progress"> <i class="zmdi zmdi-swap"></i> </a> </li>
+                                      <li class="col-xs-3" x-ng-click="mainVm.sidebar.getData().downloadFile(
+                                          mainVm.sidebar.getData().currentSelectedDocument.current)"> <a x-ng-href="" title="{{'BOUTON_LABEL_TITLE.DOWNLOAD' | translate}}"> <i class="zmdi zmdi-download"></i> </a> </li>
+                                      <li class="col-xs-3" x-ng-click="mainVm.sidebar.getData().copyIntoFiles(
+                                          mainVm.sidebar.getData().currentSelectedDocument.current)"> <a href="" title="{{'ACTION.COPY_IN_GROUP' | translate}}"> <i class="zmdi zmdi-copy"></i> </a> </li>
+                                  </ul>
+                              </div>
+                              <div class="content-detail-area">
+                                  <div class="flex-ctn detail-info-ctn">
+                                      <div class="item-l"> <span class="first-letter user-info" x-ng-if="mainVm.sidebar.getData().currentPage == 'my_files'"> {{loggedUser.firstName.charAt(0)}} </span> <span class="first-letter user-info" x-ng-if="mainVm.sidebar.getData().currentPage == 'received_files'"> {{mainVm.sidebar.getData().currentSelectedDocument.current.sender.firstName.charAt(0)}} </span> </div>
+                                      <div class="item-mid">
+                                          <div class="name" x-ng-if="mainVm.sidebar.getData().currentPage == 'my_files'">{{'ME' | translate}}</div>
+                                          <div class="name" x-ng-if="mainVm.sidebar.getData().currentPage == 'received_files'"> {{mainVm.sidebar.getData().currentSelectedDocument.current.sender.firstName}} {{mainVm.sidebar.getData().currentSelectedDocument.current.sender.lastName}} </div>
+                                          <div class="info-item-member" tooltip-placement="bottom" tooltip-popup-delay="500" uib-tooltip="{{mainVm.sidebar.getData().currentSelectedDocument.current.modificationDate | date : mainVm.sidebar.getData().lsFullDateFormat()}}"> <span class="ng-binding">{{'INFORMATION_TAB.UPTADED_THE' | translate}} : {{mainVm.sidebar.getData().currentSelectedDocument.current.modificationDate | date: mainVm.sidebar.getData().lsFormat()}} </span> </div>
+                                      </div>
+                                      <div class="item-r actions"> <span>{{mainVm.sidebar.getData().currentSelectedDocument.current.size | readableSize: false}}</span> <span class="seperator-inline">|</span> <span title="{{mainVm.sidebar.getData().currentSelectedDocument.current.type}}" class="set-ellipsis"> {{mainVm.sidebar.getData().currentSelectedDocument.current.name | getextension}} </span> </div>
+                                  </div>
+                                  <div class="meta-data-ctn">
+                                      <h2 class="subheader"> <i class="fa fa-file-text" aria-hidden="true"></i> {{'INFORMATION_TAB.META_DATA' | translate}} </h2>
+                                      <div class="meta-data-content">
+                                          <div>
+                                              <p x-ng-if="mainVm.sidebar.getData().currentPage == 'my_files'"> {{'RIGHT_PANEL.DETAILS.CREATION_DATE' | translate}}: </p>
+                                              <p x-ng-if="mainVm.sidebar.getData().currentPage == 'received_files'"> {{'RIGHT_PANEL.DETAILS.SHARING_DATE' | translate}}: </p>
+                                              <p tooltip-placement="bottom" tooltip-popup-delay="500" uib-tooltip="{{mainVm.sidebar.getData().currentSelectedDocument.current.creationDate | date : lsFullDateFormat()}}"> {{mainVm.sidebar.getData().currentSelectedDocument.current.creationDate | date : mainVm.sidebar.getData().lsFormat()}} </p>
+                                          </div>
+                                          <div>
+                                              <p>{{'RIGHT_PANEL.DETAILS.EXPIRATION_DATE' | translate}}:</p>
+                                              <p tooltip-placement="bottom" tooltip-popup-delay="500" uib-tooltip="{{mainVm.sidebar.getData().currentSelectedDocument.current.expirationDate | date : mainVm.sidebar.getData().lsFullDateFormat()}}"> <span x-ng-if="mainVm.sidebar.getData().currentSelectedDocument.current.expirationDate !== null"> {{mainVm.sidebar.getData().currentSelectedDocument.current.expirationDate | date : mainVm.sidebar.getData().lsFormat()}} </span> <span x-ng-if="mainVm.sidebar.getData().currentSelectedDocument.current.expirationDate == null"> {{'RIGHT_PANEL.DETAILS.UNDEFINED' | translate}} </span> </p>
+                                          </div>
+                                          <div x-ng-if="mainVm.sidebar.getData().currentPage == 'my_files'">
+                                              <p>{{'RIGHT_PANEL.DETAILS.SHARED_WITH' | translate}}</p>
+                                              <p x-ng-click="mainVm.sidebar.getData().nextTab()"> <a>{{mainVm.sidebar.getData().currentSelectedDocument.current.shared}} {{'RIGHT_PANEL.DETAILS.PEOPLE_SHARED_WITH' | translate}} </a> </p>
+                                          </div>
+                                          <div x-ng-show="mainVm.sidebar.getData().linshareModeProduction == false">
+                                              <p>{{'RIGHT_PANEL.DETAILS.CIPHERED' | translate}}:</p>
+                                              <p> <span x-ng-show="mainVm.sidebar.getData().currentSelectedDocument.current.ciphered == true"> {{'RIGHT_PANEL.DETAILS.CIPHERED_YES' | translate}} </span> <span x-ng-show="mainVm.sidebar.getData().currentSelectedDocument.current.ciphered == false"> {{'RIGHT_PANEL.DETAILS.CIPHERED_NO' | translate}} </span> </p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <label x-ng-if="mainVm.sidebar.getData().share.recipients.length > 0" class="p-t-20"> <textarea x-ng-model="mainVm.sidebar.getData().share.sharingNote" placeholder="add a note"></textarea> </label> 
+                          </div>
+                      </div>
+                      <div x-ng-hide="mainVm.sidebar.getData().currentSelectedDocument.current.name" class="p-l-10 p-r-10"> {{"RIGHT_PANEL.EMPTY" | translate}} </div>
+                  </md-content>
+              </md-tab>
+              <md-tab id="tab2" x-ng-if="mainVm.sidebar.getData().currentPage == 'my_files'" label="{{'RIGHT_PANEL.RECIPIENTS.TITLE' | translate}}" class="col-xs-4 no-padding">
+                  <md-content class="md-padding">
+                      <p class="empty-res" x-ng-if="mainVm.sidebar.getData().currentSelectedDocument.current.shared === 0"> <i class="zmdi zmdi-info-outline"></i><span>{{'RIGHT_PANEL.RECIPIENTS.NO_SHARES' | translate}}</span> </p>
+                      <div x-ng-if="mainVm.sidebar.getData().currentSelectedDocument.current.shared > 0">
+                          <div class="input-group search-bar col-xs-12">
+                              <div id="search-field-ctn">
+                                  <div class="search-style">
+                                      <div class="fg-line"> <input type="text" class="form-control" autocomplete="off" x-ng-model="mainVm.sidebar.getData().paramFilter['name']" placeholder="{{'RIGHT_PANEL.RECIPIENTS.SEARCH_USERS' | translate}}" x-ng-change="mainVm.sidebar.getData().updateParams()"> </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="recipients-list-sharing-details">
+                              <div class="recipientsAutocomplete actions" x-ng-repeat="shareElement in mainVm.sidebar.getData().currentSelectedDocument.current.shares" title="{{shareElement.recipient.domain}}" x-ng-click="mainVm.sidebar.getData().recipientShareDetails.current = shareElement;
+                                  mainVm.sidebar.getData().loadSidebarContent(mainVm.sidebar.getData().lsAppConfig.shareDetails)">
+                                  <span x-ng-show="!shareElement.recipient.external" class="firstLetterFormat"> {{shareElement.recipient.firstName.charAt(0)}} </span> <span x-ng-show="shareElement.recipient.external" class="firstLetterFormat"> {{shareElement.recipient.mail.charAt(0)}} </span> 
+                                  <p class="recipientsInfo"> <span x-ng-show="!shareElement.recipient.external" class="user-full-name"> <strong>{{shareElement.recipient.firstName}} <span class="lastName">{{shareElement.recipient.lastName.toUpperCase()}}</span> </strong> </span> <span x-ng-show="shareElement.recipient.external" class="user-full-name"> <strong>{{shareElement.recipient.mail}}</strong> </span> <span x-ng-if="shareElement.downloaded === 0" class="email"> {{'RIGHT_PANEL.RECIPIENTS.NOT_DOWNLOADED' | translate}} </span> <span x-ng-if="shareElement.downloaded !== 0" class="email"> {{'RIGHT_PANEL.RECIPIENTS.DOWNLOADED' | translate}}: {{shareElement.downloaded}} </span> </p>
+                                  <a class="info-partage-link" href=""><i class="zmdi zmdi-info-outline"></i></a> 
+                              </div>
+                          </div>
+                      </div>
+                  </md-content>
+              </md-tab>
+              <md-tab id="tab3" label="{{'RIGHT_PANEL.ACTIVITIES.TITLE' | translate}}" class="col-xs-4 no-padding disabled">
+                  <md-content class="md-padding">
+                      <div data-ng-repeat="auditAction in mainVm.sidebar.getData().currentSelectedDocument.current.auditActions" audit-details="{{auditAction}}" class="audit-card"></div>
+                  </md-content>
+              </md-tab>
+          </md-tabs>
+      </md-content>
+  </div>
+</div>

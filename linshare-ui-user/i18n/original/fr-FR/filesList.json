@@ -1,0 +1,132 @@
+{
+  "PAGE_FILE_TITLE": "Mes fichiers",
+  "TABLE_HEADER": {
+    "NAME": "Nom",
+    "MODIFICATION_DATE": "Dernière modification",
+    "CREATION_DATE": "Date de création",
+    "SIZE": "Taille",
+    "ACTION": "Actions"
+  },
+  "BREADCRUMB_ISOLATE": "Vue isolée",
+  "BREADCRUMB_TITLE": "Mes fichiers",
+  "BACKGROUND_WORKGROUP_TITLE_MSG": "GROUPES DE TRAVAIL",
+  "BACKGROUND_WORKGROUP_MSG": "Créer des groupes de travail pour échanger des fichiers avec vos collègues.",
+  "RIGHT_PANEL": {
+    "EMPTY": "Aucun fichier sélectionné",
+    "DETAILS": {
+      "ADVANCED_SHARE": "Partage avancé",
+      "CANCEL": "Annuler",
+      "CIPHERED": "Chiffré",
+      "CIPHERED_NO": "Non",
+      "CIPHERED_YES": "Oui",
+      "CREATE": "Créer",
+      "CREATE_LIST": "Créer une liste",
+      "CREATION_DATE": "Créé le",
+      "DESCRIPTION": "Description",
+      "EXPIRATION_DATE": "Expire le",
+      "EXPIRATION_DATE_LABEL": "Date d'expiration:",
+      "INPUT_LIST_NAME": "Saisissez le nom de votre liste",
+      "MODIFICATION_DATE": "Modifié le",
+      "NO_PREVIEW": "Aucune prévisualisation",
+      "PARAMETERS": "Paramétrages",
+      "PEOPLE_SHARED_WITH": "personne(s)",
+      "QUICK_SHARE": "Partage",
+      "RECIPIENTS_SELECTION": "Sélections des destinataires",
+      "SELECTED_FILES": "Fichiers sélectionnés",
+      "SHARE": "Partager",
+      "SHARE_PLACEHOLDER": "adresse de courriel des destinataires",
+      "SHARED_BY": "Partagé par:",
+      "SHARED_WITH": "Partagé avec:",
+      "SHARING_DATE": "Date de partage",
+      "SIZE": "Taille",
+      "TITLE": "DETAILS",
+      "TYPE": "Type",
+      "UNDEFINED": "Non défini",
+      "UPLOAD_DATE": "Date de dépôt"
+    },
+    "DETAIL_SHARE": {
+      "TITLE": "Détails du partage",
+      "SHARED_DATE": "Partagé le",
+      "EXPIRATION_DATE": "Expire le",
+      "DOWNLOADED": "Téléchargé",
+      "TIMES": "fois",
+      "EDIT": "Modifier",
+      "VIEW_MORE": "Voir le détail",
+      "RESEND": "Relancer",
+      "ABORT_SHARE": "Annuler le partage"
+    },
+    "ACTIVITIES": {
+      "TITLE": "Historique"
+    },
+    "RECIPIENTS":{
+      "TITLE": "Partages",
+      "DOWNLOADED": "Téléchargé",
+      "NOT_DOWNLOADED": "Non-téléchargé",
+      "SEARCH_USERS": "Rechercher par destinataires",
+      "NO_SHARES": "Vous n'avez aucun partage en cours."
+    },
+    "SHARE": {
+      "SELECTED_FILES": "fichier(s) sélectionné(s)",
+      "UNHIDE_FILES": "afficher tout",
+      "SHOW_SELECTED_FILES": "isoler sélection",
+      "SETTINGS": "Paramètres avancés",
+      "MORE_OPTIONS": "plus d'options",
+      "RECIPIENTS": "Ajouter des destinataires",
+      "CREATE_MAILING_LIST": "Sauvegarder",
+      "CREATE_MAILING_LIST_ALT": "Créer une liste d'envoi"
+    },
+    "SHARE_OPTIONS": {
+      "TITLE": "Options du partage",
+      "ADD_NOTE": "Ajouter une note",
+      "ADD_NOTE_PLACEHOLDER": "Saisissez une note de partage",
+      "SECURE_SHARING": "Sécuriser le partage",
+      "SHARING_ACKNOWLEDGEMENT": "Recevoir un accusé de partage",
+      "USDA": "Recevoir un accusé de non téléchargement",
+      "NOTIFICATION_DATE": "Date de notification",
+      "ATTACH_EMAIL": "Personnaliser le courriel",
+      "ATTACHED_EMAIL_SUBJECT": "Sujet",
+      "ATTACHED_EMAIL_BODY_PLACEHOLDER": "Saisissez votre message",
+      "SHOW_SELECTED_FILES": "Voir les fichiers",
+      "GO_TO_UPLOAD_FILES": "Retour vers les dépots"
+    },
+    "CURRENT_SHARE_DETAIL": {
+      "TITLE": "Details du partage",
+      "RECIPIENTS": "Destinataires",
+      "SHARE_PARAMS": "Paramètres de partage",
+      "NOTE": "Note",
+      "MAIL_CONTENT": "Corps du mail",
+      "CUSTOM_MAIL_TEMPLATE": "Personnalisation du mail",
+      "SHARE_OPTIONS": "Annuler partage"
+    }
+  },
+  "SELECTED_FILES": {
+    "BREADCRUMB_TITLE": "Fichiers sélectionnés",
+    "BACK_TO_ALL_FILES": "Retour à mes fichiers",
+    "SHOW_DETAILS": "Voir détails"
+  },
+  "UPLOADED_FILES": {
+    "BREADCRUMB_TITLE": "Mes dépôts",
+    "UPLOAD_FILES_BUTTON": "Nouveau dépôt",
+    "SELECT_INFO": "Sélectionnez des fichiers si vous souhaitez les partager"
+  },
+  "DRAG_DROP_BACKGROUND": {
+    "TITLE": "Déposez vos fichiers ici",
+    "COMMENT": "Glissez vos fichiers dans l'interface pour les déposer"
+  },
+  "DRAG_DROP_BACKGROUND_MOBILE_MY_FILES": {
+    "TITLE": "Ajoutez et partagez",
+    "COMMENT": "Ajoutez vos fichiers et partagez-les."
+  },
+  "DRAG_DROP_BACKGROUND_ON_DRAG": {
+    "TITLE": "Déposez vos fichiers ici",
+    "COMMENT": "Glissez vos fichiers dans l'interface pour les déposer"
+  },
+  "WORKGROUPS_LIST": {
+    "PROJECT": "Projet",
+    "FOLDER": "Dossier",
+    "SHARED_FOLDER": "Groupe de travail",
+    "UPLOAD_FILE": "Dépôt",
+    "UPLOAD_REQUEST": "Inv. de dépot",
+    "ADD_A_MEMBER": "Membre"
+  }
+}
